@@ -28,7 +28,7 @@ body {
 /* Header y Navegación (¡Banner Todavía Más Grande!) */
 /* ------------------------------------------------ */
 header {
-    background-image: url('Banner.png'); /* ¡CAMBIA ESTA URL por tu imagen de banner! */
+    background-image: url('../img/Banner.png');
     background-size: cover; /* Cubre todo el área del header */
     background-position: center; /* Centra la imagen */
     color: white;
