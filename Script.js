@@ -157,4 +157,3 @@ function cargarProductos() {
 // Llama a la función cargarProductos cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', cargarProductos);
 
-// Puedes añadir aquí más funciones de JavaScript si las necesitas en el futuro
