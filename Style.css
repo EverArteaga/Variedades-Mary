@@ -1,0 +1,244 @@
+/* ------------------------------------------------ */
+/* Estilos Generales y Resets */
+/* ------------------------------------------------ */
+html {
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho/alto */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Hereda el box-sizing para todos los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Cambiado de #ac1313 a white */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ------------------------------------------------ */
+/* Header y Navegación (¡Banner Todavía Más Grande!) */
+/* ------------------------------------------------ */
+header {
+    background-image: url('Banner.png'); /* ¡CAMBIA ESTA URL por tu imagen de banner! */
+    background-size: cover; /* Cubre todo el área del header */
+    background-position: center; /* Centra la imagen */
+    color: white;
+    padding: 8rem 0; /* ¡MUCHO MÁS GRANDE! (ajustado de 6rem a 8rem) */
+    text-align: center;
+    position: relative; /* Necesario para el overlay */
+    overflow: hidden; /* Para asegurar que el contenido esté dentro */
+}
+
+/* Capa de overlay semi-transparente para mejorar la legibilidad del texto */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Capa negra semi-transparente */
+    z-index: 1; /* Asegura que esté sobre la imagen de fondo pero debajo del texto */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Un poco más grande para el banner */
+    z-index: 2; /* Asegura que el título esté sobre el overlay */
+    position: relative; /* Necesario para z-index */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para el texto */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Espacio debajo del título */
+    z-index: 2; /* Asegura que la navegación esté sobre el overlay */
+    position: relative; /* Necesario para z-index */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #11c7fa; /* Un azul claro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* ------------------------------------------------ */
+/* Sección de Productos */
+/* ------------------------------------------------ */
+section#productos { /* Selector más específico para la sección de productos */
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra base para la sección */
+}
+
+section#productos h2 {
+    text-align: center;
+    color: #8c42a3; /* Un púrpura más oscuro para los títulos */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Estilos para las tarjetas de producto (¡efecto flotante aún más dinámico!) */
+.producto-card {
+    background-color: white; /* Cambiado de #ec0c0c a white */
+    border: 1px solid white; /* Cambiado de #fc0000 a white */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    /* Sombra inicial */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    /* Transición para todos los cambios */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-radius 0.3s ease-out;
+    cursor: pointer; /* Indica que es interactivo */
+}
+
+.producto-card:hover {
+    /* Eleva y escala ligeramente la tarjeta */
+    transform: translateY(-12px) scale(1.02);
+    /* Sombra más grande, oscura y con un ligero desenfoque */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    /* Ligeramente más redondeado al flotar */
+    border-radius: 12px;
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------ */
+footer {
+    background-color: #8505d5;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px; /* Espacio superior para separar del contenido */
+}
+
+/* ------------------------------------------------ */
+/* Botón Flotante de WhatsApp */
+/* ------------------------------------------------ */
+.whatsapp-float {
+    position: fixed; /* Hace que el botón "flote" con la pantalla */
+    width: 60px;
+    height: 60px;
+    bottom: 40px; /* Distancia desde la parte inferior */
+    right: 40px; /* Distancia desde la parte derecha */
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: #FFF;
+    border-radius: 50px; /* Para que sea un círculo */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para el efecto flotante */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Para centrar el ícono */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #1DA851; /* Un verde más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Sombra más intensa al pasar el ratón */
+}
+
+.whatsapp-float i {
+    color: white; /* Asegura que el ícono sea blanco */
+}
+
+/* ------------------------------------------------ */
+/* Media Queries para Responsividad */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    /* Navegación para pantallas pequeñas */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Ajuste de grid de productos para pantallas pequeñas */
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Permite tarjetas más pequeñas en móviles */
+        gap: 20px;
+    }
+
+    /* Ajuste del botón de WhatsApp para pantallas pequeñas */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Sombra más pequeña en móviles */
+    }
+
+    /* Ajuste del banner para móviles */
+    header {
+        padding: 4rem 0; /* Ajuste para que siga siendo grande pero responsivo */
+    }
+    header h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+}
