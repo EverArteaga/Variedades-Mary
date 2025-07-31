@@ -36,19 +36,19 @@ const productos = [
         id: 6,
         nombre: "Bleu Femmu Capri",
         descripcion: "50 ml",   
-        imagen:"Bleu Femmu Capri.JPEG"
+        imagen:"Bleu-Femmu-Capri.JPEG"
     },
     {
         id: 7,
         nombre: "Bleu Intense",
         descripcion: "100 ml",
-        imagen:"Bleu Intense.JPEG"
+        imagen:"Bleu-Intense.JPEG"
     },
      {
         id: 8,
         nombre: "Bleu Night",
         descripcion: "100 ml",
-        imagen:"Bleu Night.JPEG"
+        imagen:"Bleu-Night.JPEG"
     },
      {
         id: 9,
@@ -72,13 +72,13 @@ const productos = [
         id: 12,
         nombre: "Mini Chics",
         descripcion: "120 ml",
-        imagen:"Mini Chics.JPEG"
+        imagen:"Mini-Chics.JPEG"
     },
     {
         id: 13,
         nombre: "New Cool",
         descripcion: "75 ml",
-        imagen:"New Cool.JPEG"
+        imagen:"New-Cool.JPEG"
     },
     {
         id: 14,
@@ -90,7 +90,7 @@ const productos = [
         id: 15,
         nombre: "Pack Mithyca",
         descripcion: "50 ml / 130 ml",
-        imagen:"Pack Mithyka.JPEG"
+        imagen:"Pack-Mithyka.JPEG"
     },
     {
         id: 16,
@@ -102,13 +102,13 @@ const productos = [
         id: 17,
         nombre: "Splash refrescantes",
         descripcion: "200 ml",
-        imagen:"Splash refrescantes.JPEG"
+        imagen:"Splash-refrescantes.JPEG"
     },
     {
         id: 18,
         nombre: "Splash Universe",
         descripcion: "200 ml",
-        imagen:"Splash Universe.JPEG"
+        imagen:"Splash-Universe.JPEG"
     },
     {
         id: 19,
@@ -132,7 +132,7 @@ const productos = [
         id: 22,
         nombre: "sweet black",
         descripcion: "50 ml",
-        imagen:"Sweet black.JPEG"
+        imagen:"Sweet-black.JPEG"
     }, 
 ];
 
